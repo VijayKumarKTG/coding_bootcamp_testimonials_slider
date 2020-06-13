@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --primary-color: hsl(240, 18%, 77%);
+  --secondary-color: hsl(240, 38%, 20%);
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  background: url(./images/pattern-curve.svg) bottom left/350px no-repeat;
+}
+
+.template {
+  padding: 7px 20px 20px 20px;
+  position: relative;
+}
+
+.template__img {
+  width: 100%;
+  margin: auto;
+  background: url(./images/pattern-bg.svg) center/contain no-repeat;
+}
+
+.template__img div {
+  width: 100%;
+  padding: 50px;
+}
+
+.template__img div img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 13px 19px 29px var(--secondary-color), 0px -33px 81px #ffffff;
+}
+
+.animate {
+  animation: slide 1.5s linear;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.template__button {
+  margin: auto;
+  width: 50px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  position: relative;
+  top: -76px;
+  height: 30px;
+}
+
+.template__button img {
+  height: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.template__button img:first-of-type {
+  margin-right: 15px;
+}
+
+.template__desc {
+  background: url(./images/pattern-quotes.svg) top center/60px no-repeat;
+  padding-top: 30px;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+  font-size: 18px;
+  margin-top: -25px;
+}
+
+.template__author {
+  font-size: 15px;
+  color: var(--secondary-color);
+}
+
+.template__author strong {
+  display: block;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 375px) {
+  .template__button {
+    width: 70px;
+    height: auto;
+  }
+
+  .template__button img {
+    height: 12px;
+    margin-bottom: 5px;
+  }
+
+  .template__button img:first-of-type {
+    margin-right: 28px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .template__img div {
+    padding: 100px;
+  }
+
+  .template__button {
+    top: -118px;
+  }
+
+  .template__desc {
+    margin-top: -73px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .template {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .template__second-part {
+    width: 70%;
+  }
+
+  .template__img div {
+    padding: 15%;
+  }
+
+  .template__button {
+    top: -85px;
+    left: -60px;
+  }
+
+  .template__desc {
+    text-align: left;
+    background-position: 60px 0px;
+    font-size: 21px;
+    position: relative;
+    left: 90px;
+  }
+
+  .template__author {
+    text-align: left;
+    position: relative;
+    left: 90px;
+  }
+
+  .template__author strong {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .template__desc,
+  .template__author {
+    left: 140px;
+  }
+
+  .template__button {
+    top: -100px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .template__desc,
+  .template__author {
+    left: 150px;
+  }
+
+  .template__button {
+    top: -100px;
+  }
+}
