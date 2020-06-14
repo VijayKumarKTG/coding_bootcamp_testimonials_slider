@@ -11,6 +11,10 @@
   --secondary-color: hsl(240, 38%, 20%);
 }
 
+html {
+  height: 100%;
+}
+
 body {
   height: 100%;
   width: 100%;
@@ -26,7 +30,7 @@ body {
 }
 
 .template {
-  padding: 7px 20px 20px 20px;
+  padding: 7px 20px 0px 20px;
   position: relative;
 }
 
@@ -143,19 +147,35 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .container {
+    background-size: 50%;
+  }
+
   .template {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+  }
+
+  .template__first-part {
+    width: 50%;
+  }
+
+  .template__first-part,
+  .template__img,
+  .template__img div {
+    height: 100%;
   }
 
   .template__second-part {
-    width: 70%;
+    width: 50%;
+    font-size: 32px;
   }
 
   .template__img div {
-    padding: 15%;
+    padding: 81px 11% 86px 16%;
   }
 
   .template__button {
@@ -166,15 +186,16 @@ body {
   .template__desc {
     text-align: left;
     background-position: 60px 0px;
-    font-size: 21px;
     position: relative;
     left: 90px;
+    font-size: inherit;
   }
 
   .template__author {
     text-align: left;
     position: relative;
     left: 90px;
+    font-size: 21px;
   }
 
   .template__author strong {
@@ -182,24 +203,50 @@ body {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1024px) {
   .template__desc,
   .template__author {
     left: 140px;
   }
 
   .template__button {
-    top: -100px;
+    top: -102px;
+    left: -78px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .template__button {
+    top: -110px;
+    left: -108px;
   }
 }
 
 @media screen and (min-width: 1440px) {
+  .template__img div {
+    padding: 117px 111px 130px 80px;
+  }
+
   .template__desc,
   .template__author {
-    left: 150px;
+    left: 160px;
   }
 
   .template__button {
-    top: -100px;
+    top: -157px;
+    left: -155px;
+    width: 114px;
+    height: 60px;
+    border-radius: 35px;
+  }
+
+  .template__button img {
+    height: 18px;
+    margin-bottom: -7px;
+    cursor: pointer;
+  }
+
+  .template__button img:first-of-type {
+    margin-right: 31px;
   }
 }
