@@ -30,7 +30,7 @@ body {
 }
 
 .template {
-  padding: 7px 20px 0px 20px;
+  padding: 20px 20px 0px 20px;
   position: relative;
 }
 
@@ -48,7 +48,7 @@ body {
 .template__img div img {
   width: 100%;
   border-radius: 10px;
-  box-shadow: 13px 19px 29px var(--secondary-color), 0px -33px 81px #ffffff;
+  box-shadow: 13px 19px 29px var(--secondary-color);
 }
 
 .animate {
@@ -96,6 +96,7 @@ body {
   color: var(--secondary-color);
   font-size: 18px;
   margin-top: -25px;
+  font-weight: 300;
 }
 
 .template__author {
@@ -105,6 +106,10 @@ body {
 
 .template__author strong {
   display: block;
+}
+
+.template__author span {
+  color: var(--primary-color);
 }
 
 .attribution {
@@ -163,32 +168,29 @@ body {
     width: 50%;
   }
 
-  .template__first-part,
-  .template__img,
-  .template__img div {
-    height: 100%;
-  }
-
   .template__second-part {
     width: 50%;
     font-size: 32px;
   }
 
   .template__img div {
-    padding: 81px 11% 86px 16%;
+    padding: 100px 11% 86px 16%;
   }
 
   .template__button {
-    top: -85px;
-    left: -60px;
+    top: -113px;
+    left: -73px;
   }
 
   .template__desc {
     text-align: left;
     background-position: 60px 0px;
+    background-size: 90px;
     position: relative;
     left: 90px;
     font-size: inherit;
+    padding-top: 41px;
+    margin-top: 50px;
   }
 
   .template__author {
@@ -207,6 +209,12 @@ body {
   .template__desc,
   .template__author {
     left: 140px;
+  }
+
+  .template__desc {
+    background-size: 110px;
+    padding-top: 72px;
+    margin-top: -22px;
   }
 
   .template__button {
